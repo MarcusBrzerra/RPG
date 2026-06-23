@@ -1,12 +1,13 @@
 import Topbar from "./Topbar";
 import Sidebar from "./Sidebar";
+import "../components/Layout.css"
 
 const Layout = ({children}) => {
     return(
         <section className="layout-section">
-            <Sidebar />
+            <Topbar />
             <main className="layout-content">
-                <Topbar />
+                <Sidebar />
                 <section className="layout-content-area">
                 {children}
                 </section>

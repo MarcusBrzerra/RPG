@@ -1,0 +1,41 @@
+.layout-section {
+    /* Evita “buracos” verticais e garante que o conteúdo use a altura real da tela */
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #252525;
+}
+
+.layout-content {
+    flex: 1;
+
+    /* Topbar acima; aqui fica a área de navegação + conteúdo */
+    display: flex;
+    min-height: 0; /* necessário para o overflow funcionar bem */
+}
+
+.layout-content-area {
+    flex: 1;
+
+    /* Altura calculada para rolar sem criar espaço branco extra */
+    min-height: 0;
+
+    padding: 2rem;
+
+    background-color: #303030;
+
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+
+    .layout-content {
+        flex-direction: column;
+    }
+
+    .layout-content-area {
+        padding: 1rem;
+    }
+}
