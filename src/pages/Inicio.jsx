@@ -4,9 +4,7 @@ import Layout from "../components/Layout";
 
 const Inicio = () => {
     return(
-        <Layout>
-            <h1>Inicio</h1>
-        </Layout>
+        <h1>Inicio</h1>
     );
 }
 export default Inicio;
