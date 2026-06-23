@@ -1,5 +1,6 @@
 import { useState } from "react";
 import dado from "../assets/dado.png"
+import "../components/Topbar.css"
 
 const Topbar = () => {
     return(
