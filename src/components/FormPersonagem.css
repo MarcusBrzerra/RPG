@@ -87,7 +87,7 @@
 }
 
 /* Botão de Enviar estilizado como os botões do menu lateral */
-button[type="submit"] {
+.salvarPersonagem{
   background-color: #2a2a2a;
   color: #fff;
   border: 1px solid #444;
@@ -102,7 +102,7 @@ button[type="submit"] {
 }
 
 /* Efeito hover imitando os botões ativos da lateral esquerda */
-button[type="submit"]:hover {
+.salvarPersonagem:hover {
   background-color: #b19453;
   color: #1a1a1a;
   border-color: #b19453;
