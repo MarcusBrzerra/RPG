@@ -7,11 +7,7 @@ function Personagem() {
 
     return (
         <>
-            <h1>Criar Personagem</h1>
-
             <FormPersonagem />
-
-            <hr />
 
             <section className="ficha">
 
@@ -21,7 +17,7 @@ function Personagem() {
                 <p>Idade: {personagem.idade}</p>
                 <p>Classe: {personagem.classe}</p>
                 <p>Raça: {personagem.raca}</p>
-                <p>Nível: {personagem.nivel}</p>
+                <p>Nível: {personagem.level}</p>
 
                 <h3>Atributos</h3>
 
