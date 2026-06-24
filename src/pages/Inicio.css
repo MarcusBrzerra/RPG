@@ -1,0 +1,95 @@
+.titulo-home {
+
+    color: #d4af37;
+
+    margin-bottom: 2rem;
+}
+
+.painel-home {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 2rem;
+
+    margin-bottom: 2rem;
+}
+
+.card-home {
+
+    background-color: #1b1b1b;
+
+    border: 2px solid #d4af37;
+
+    border-radius: 15px;
+
+    padding: 2rem;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.4);
+}
+
+.card-home h2 {
+
+    color: #d4af37;
+
+    margin-bottom: 1rem;
+}
+
+.card-home p {
+
+    color: #f5f5f5;
+
+    margin-bottom: 1.5rem;
+}
+
+.botao-home {
+
+    text-decoration: none;
+
+    background-color: #d4af37;
+
+    color: #1b1b1b;
+
+    padding: 1rem;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    display: inline-block;
+
+    transition: .3s;
+}
+
+.botao-home:hover {
+
+    transform: translateY(-3px);
+}
+
+.sobre-rpg {
+
+    background-color: #1b1b1b;
+
+    border-radius: 15px;
+
+    padding: 2rem;
+
+    border: 2px solid #d4af37;
+}
+
+.sobre-rpg h2 {
+
+    color: #d4af37;
+
+    margin-bottom: 1rem;
+}
+
+.sobre-rpg p {
+
+    color: #f5f5f5;
+
+    line-height: 1.8;
+}

@@ -18,11 +18,56 @@ function FormPersonagem() {
             [e.target.name]: e.target.value
         });
     }
+    const validarFormulario = () => {
+
+        if (personagem.nome.trim() === "") {
+            alert("Informe o nome do personagem.");
+            return false;
+        }
+
+        if (personagem.idade <= 0) {
+            alert("A idade deve ser maior que zero.");
+            return false;
+        }
+
+        if (personagem.classe === "") {
+            alert("Escolha uma classe.");
+            return false;
+        }
+
+        if (personagem.raca === "") {
+            alert("Escolha uma raça.");
+            return false;
+        }
+
+        for (const atributo of personagem.atributos) {
+
+            if (atributo.valor < 1 || atributo.valor > 20) {
+
+                alert(
+                    `${atributo.nome} deve estar entre 1 e 20`
+                );
+
+                return false;
+            }
+
+        }
+
+        return true;
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         enviarParaServidor(); // Dispara o envio via Axios
     };
+
+    const handleSalvar = () => {
+
+        if (validarFormulario()) {
+            enviarParaServidor();
+        }
+
+    }
     
 
     return (
@@ -118,7 +163,7 @@ function FormPersonagem() {
 
                 </fieldset>
             </fieldset>
-            <button type="button" onClick={enviarParaServidor}>
+            <button type="button" onClick={handleSalvar} className="salvarPersonagem">
                 Salvar Personagem
             </button>
         </form>
