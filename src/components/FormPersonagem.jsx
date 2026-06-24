@@ -1,18 +1,32 @@
-    import { usePersonagem } from "../contexts/PersonagemContext";
+import { usePersonagem } from "../contexts/PersonagemContext";
+import "../components/FormPersonagem.css"
 
-    function FormPersonagem() {
+function FormPersonagem() {
 
-        const {personagem, setPersonagem, classes, racas, alterarAtributo} = usePersonagem();
+    const {
+    personagem,
+    setPersonagem,
+    classes,
+    racas,
+    alterarAtributo,
+    enviarParaServidor
+    } = usePersonagem();
 
-        const handleChange = (e) => {
-            setPersonagem({
-                ...personagem,
-                [e.target.name]: e.target.value
-            });
-        }
-        
+    const handleChange = (e) => {
+        setPersonagem({
+            ...personagem,
+            [e.target.name]: e.target.value
+        });
+    }
 
-        return (
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        enviarParaServidor(); // Dispara o envio via Axios
+    };
+    
+
+    return (
+        <form onSubmit={handleSubmit}>
             <fieldset className="formulario-personagem">
                 <legend className="titulo-form">Criar Personagem</legend>
 
@@ -65,8 +79,8 @@
                     <span className="texto-label">nivel:</span>
                     <input 
                         type="number" 
-                        name="nivel" 
-                        value={personagem.nivel} 
+                        name="level" 
+                        value={personagem.level} 
                         onChange={handleChange}
                     />
                 </label>
@@ -104,7 +118,11 @@
 
                 </fieldset>
             </fieldset>
-        );
-    }
+            <button type="button" onClick={enviarParaServidor}>
+                Salvar Personagem
+            </button>
+        </form>
+    );
+}
 
-    export default FormPersonagem;
+export default FormPersonagem;
